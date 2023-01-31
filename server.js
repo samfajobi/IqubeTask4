@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 // import productRoutes from './routes/productRoutes.js'
 // import userRoutes from './routes/userRoutes.js'
-import { notFound, errorHandler } from './middleware/errorMiddleware.js'
+// import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import morgan from 'morgan'
 
 
@@ -18,7 +18,7 @@ connectDB()
  if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
 }
-
+   
  app.use(express.json())
 
  app.get('/', (req, res) => {
