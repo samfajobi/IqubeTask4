@@ -1,14 +1,16 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
+import mongoose from 'mongoose'
 // import productRoutes from './routes/productRoutes.js'
 // import userRoutes from './routes/userRoutes.js'
 // import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import morgan from 'morgan'
 
 
-dotenv.config()
+dotenv.config();
 
+mongoose.set("strictQuery", false);
 connectDB()
 
 
@@ -29,8 +31,8 @@ connectDB()
 //  app.use('/api/products', productRoutes)
 //  app.use('/api/users', userRoutes)
 
- app.use(notFound)
- app.use(errorHandler)
+//  app.use(notFound)
+//  app.use(errorHandler)
 
  
  app.listen(5000, console.log('Server running on port 5000'))
