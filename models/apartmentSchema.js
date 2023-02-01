@@ -31,10 +31,6 @@ import mongoose from 'mongoose'
        type: String,
        required: true,
      },
-     brand: {
-       type: String,
-       required: true,
-     },
      category: {
        type: String,
        required: true,
@@ -58,12 +54,7 @@ import mongoose from 'mongoose'
        type: Number,
        required: true,
        default: 0,
-     },
-     countInStock: {
-       type: Number,
-       required: true,
-       default: 0,
-     },
+     }
    },
    {
      timestamps: true,
